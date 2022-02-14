@@ -1,13 +1,5 @@
 <?php
 
-	/*
-
-		Single File PHP Gallery 4.8.1 (SFPG)
-
-		See EULA in readme.txt for commercial use
-		See readme.txt for configuration
-	*/
-
 	error_reporting(0);
 	
 	//	----------- CONFIGURATION START ------------
@@ -127,7 +119,7 @@
 
 	define('HTML_LANGUAGE', 'en-US');
 
-	define('TEXT_GALLERY_NAME', 'Single File PHP Gallery');
+	define('TEXT_GALLERY_NAME', 'Aasan Quran');
 	define('TEXT_BANNER', '');
 	define('TEXT_HOME', 'Home');
 	define('TEXT_CLOSE_IMG_VIEW', 'Close Image');
@@ -721,7 +713,7 @@
 
 	function sfpg_browse_dirs()
 	{
-		echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta charset="'.CHARSET.'"></head><body onload="parent.sendData(document.getElementById(\'dataContainer\').innerHTML)"><div id="dataContainer"><br>'.
+		echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta charset="'.CHARSET.'"><link rel="shortcut icon" href="_sfpg_data\logo.ico"></head><body onload="parent.sendData(document.getElementById(\'dataContainer\').innerHTML)"><div id="dataContainer"><br>'.
 		'&nbsp;'.TEXT_MOVE_TO.': <b>'.TEXT_HOME.'/'.GALLERY.'</b><br><br>'.
 		'<span class="sfpg_button" onclick="admMovePost(\''.sfpg_url_string(GALLERY,'').'\',\''.TEXT_HOME.'/'.GALLERY.'\')">OK</span>'.
 		'<span class="sfpg_button" onclick="admMovePost(false,false)">'.TEXT_CANCEL.'</span><br><br>'.
@@ -1704,7 +1696,7 @@
 					info += '".sts(TEXT_FILESIZE).": '+fileInfo[id]['fileSize']+'<br>';
 					info += '</div><br>';
 				}
-				info += '<br><small><a href=\"http://sye.dk/sfpg/\" target=\"_blank\" alt=\"\">Single File PHP Gallery</a></small>';
+				info += '<br><small><a href=\"#\" target=\"_blank\" alt=\"\">Aasan Quran</a></small>';
 				gebi('box_inner_info').innerHTML = info;
 			}
 		}
@@ -2865,7 +2857,7 @@
 			else
 			{
 				header('Content-Type: text/html; charset="'.CHARSET.'"');
-				echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="'.CHARSET.'"><title></title></head><body>'.
+				echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="'.CHARSET.'"><title></title><link rel="shortcut icon" href="_sfpg_data\logo.ico"></head><body>'.
 				'<form  name="pf" action="'.$_SERVER['REQUEST_URI'].'" method="post">'.
 				'<input type="password" name="pw" id="pw" autofocus>'.
 				'<input type="submit" name="su" value="'.TEXT_LOGIN.'">'.
@@ -3159,7 +3151,7 @@
 
 
 	list($dirs, $images, $files, $misc) = sfpg_get_dir(GALLERY);
-	echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta charset="'.CHARSET.'"><meta name="description" content="Aasan Quran"><title>'.TEXT_GALLERY_NAME.'</title><style>'.
+	echo '<!DOCTYPE html><html lang="'.HTML_LANGUAGE.'"><head><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" href="_sfpg_data\logo.ico"><meta charset="'.CHARSET.'"><meta name="description" content="Aasan Quran"><title>'.TEXT_GALLERY_NAME.'</title><style>'.
 	"
 	img
 	{
